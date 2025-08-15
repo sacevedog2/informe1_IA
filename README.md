@@ -85,3 +85,10 @@ Arad → Sibiu → Rimnicu Vilcea → Pitesti → Bucharest
 ✅ **Eficiencia superior** comparado con búsqueda exhaustiva
 
 La combinación de la heurística admisible (distancia euclidiana) con la estrategia de búsqueda de A* asegura encontrar el camino de menor costo sin necesidad de explorar exhaustivamente todo el grafo.
+
+## EJERCICIO 3
+ Diferencias encontradas entre ambos algoritmos.
+BFS recorre la red por niveles, asegurando encontrar la ruta más corta en número de paradas. Es rápido para grafos pequeños o cuando la meta está cerca, pero requiere guardar muchos nodos en memoria, lo que puede ser un problema en redes grandes.
+IDS combina la exploración en profundidad con la búsqueda por niveles. También encuentra la ruta más corta, pero usa mucha menos memoria porque solo guarda el camino actual. A cambio, repite búsquedas en niveles anteriores, por lo que suele tardar un poco más.
+En redes pequeñas como la del ejercicio, ambos dan la misma ruta y las diferencias en tiempo y memoria son mínimas. En redes grandes, BFS es más rápido si hay memoria suficiente, mientras que IDS es preferible si se quiere ahorrar memoria.
+
