@@ -67,15 +67,6 @@ Arad → Sibiu → Rimnicu Vilcea → Pitesti → Bucharest
 - Rimnicu Vilcea → Pitesti (costo: 97 km)
 - Pitesti → Bucharest (costo: 101 km)
 
-**VALORES DE f(n) = g(n) + h(n) EN EL CAMINO ÓPTIMO:**
-- Arad: g(n)=0, h(n)=366, f(n)=366
-- Sibiu: g(n)=140, h(n)=253, f(n)=393
-- Rimnicu Vilcea: g(n)=220, h(n)=193, f(n)=413
-- Pitesti: g(n)=317, h(n)=100, f(n)=417
-- Bucharest: g(n)=418, h(n)=0, f(n)=418
-
-**Costo Total**: 418 km
-
 ## 🔧 Implementación
 
 ### Estructura de Clases:
