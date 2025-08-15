@@ -90,7 +90,8 @@ La combinación de la heurística admisible (distancia euclidiana) con la estrat
 
 **¿Cómo cambia el comportamiento del algoritmo si cambiamos la
 función de costo?**
--Cambiar la función de costo, como poner ciertas penalizaciones, cambiar distancias entre vecinos u otros cambios no afectarán al comportamiento del algoritmo. Ya que en este momento el costo no se tiene en cuenta para escoger solución o camino, solo tiene en cuenta la distancia(en celdas) entre la opción de vecino y la meta.
+
+Cambiar la función de costo, como poner ciertas penalizaciones, cambiar distancias entre vecinos u otros cambios no afectarán al comportamiento del algoritmo. Ya que en este momento el costo no se tiene en cuenta para escoger solución o camino, solo tiene en cuenta la distancia(en celdas) entre la opción de vecino y la meta.
 
 **¿Qué sucede si hay múltiples salidas en el laberinto? ¿Cómo
 podrías modificar el algoritmo para manejar esto? Plantea una
@@ -101,11 +102,13 @@ Lo manejaría permitiendo registrar múltiples salidas. Luego, haría que la bú
 **Modifica el laberinto por uno más grande y con otro tipo de
 obstáculo además de paredes. ¿Qué limitación encuentras en el
 algoritmo?**
-Al modificar el tamaño del laberinto y agregarle otros obstaculos, se evidenció una gran limitación de este algoritmo, el cual se encuentra en su función de distancia manhattan, ya que es la que se usa para deifinir por cual camino andar. Esto se debe a que esta función solo sirve para hallar el camino que menos pasos requiere para llegar a la salida, definido por la distancia(en celdas) hasta la meta, no tiene en cuenta.
+
+Al modificar el tamaño del laberinto y agregarle otros obstaculos, se evidenció una gran limitación en el algoritmo, el cual se encuentra en su función de distancia manhattan, ya que es la que se usa para definir por cual camino andar. Esto se debe a que esta función solo sirve para hallar el camino que menos pasos requiere para llegar a la salida, definido por la distancia(en celdas) hasta la meta, no tiene en cuenta si estos pasos tienen mayor costo, lo que puede llevar a que no escoja el mejor camino.
 
 
 # Ejercicio 3
- Diferencias encontradas entre ambos algoritmos.
+**Diferencias encontradas entre ambos algoritmos**
+
 BFS recorre la red por niveles, asegurando encontrar la ruta más corta en número de paradas. Es rápido para grafos pequeños o cuando la meta está cerca, pero requiere guardar muchos nodos en memoria, lo que puede ser un problema en redes grandes.
 IDS combina la exploración en profundidad con la búsqueda por niveles. También encuentra la ruta más corta, pero usa mucha menos memoria porque solo guarda el camino actual. A cambio, repite búsquedas en niveles anteriores, por lo que suele tardar un poco más.
 En redes pequeñas como la del ejercicio, ambos dan la misma ruta y las diferencias en tiempo y memoria son mínimas. En redes grandes, BFS es más rápido si hay memoria suficiente, mientras que IDS es preferible si se quiere ahorrar memoria.
